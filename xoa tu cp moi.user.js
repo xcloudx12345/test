@@ -95,5 +95,5 @@ function actionFunction (jNode) {
     xoaca2("số một");
     xoatunhat();
 
-    jNode.css ("background", "pink");
+    jNode.css ("background", "white");
 }
