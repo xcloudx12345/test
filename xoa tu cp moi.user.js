@@ -92,7 +92,10 @@ function actionFunction (jNode) {
             res1 = string1.replace(/[09|08]*(\d)\s*[-. (]*(\d{2})[-. )]*(\d{2})[-. ]*(\d{2})[-. ]*(\d{2})[-. ]*(?: *x(\d+))?\s*/gi, "");
             document.getElementsByTagName("textarea")[i].value = res1;
             
-           
+            string1 = document.getElementsByTagName("textarea")[i].value;
+            res1 = string1.replace(/(?:(?:https?|ftp):\/\/|\b(?:[a-z\d]+\.))(?:(?:[^\s()<>]+|\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))?\))+(?:\((?:[^\s()<>]+|(?:\(?:[^\s()<>]+\)))?\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))?/gi, "");
+            document.getElementsByTagName("textarea")[i].value = res1;
+                                 
             i++;
         }
     }
