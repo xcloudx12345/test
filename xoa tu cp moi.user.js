@@ -67,16 +67,32 @@ function actionFunction (jNode) {
             string1 = document.getElementsByTagName("textarea")[i].value;
             res1 = string1.replace(/[01]\s*[-. (]*(\d{2})[-. )]*(\d{4})[-. ]*(\d{4})(?: *x(\d+))?\s*/gi, "");
             document.getElementsByTagName("textarea")[i].value = res1;
-
+            
+            string1 = document.getElementsByTagName("textarea")[i].value;
+            res1 = string1.replace(/[01]\s*[-. (]*(\d{4})[-. )]*(\d{3})[-. ]*(\d{3})(?: *x(\d+))?\s*/gi, "");
+            document.getElementsByTagName("textarea")[i].value = res1;
 
             string1 = document.getElementsByTagName("textarea")[i].value;
             res1 = string1.replace(/[09|08]\s*[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{3})(?: *x(\d+))?\s*/gi, "");
             document.getElementsByTagName("textarea")[i].value = res1;
             
             string1 = document.getElementsByTagName("textarea")[i].value;
+            res1 = string1.replace(/[09|08]*(\d)\s*[-. (]*(\d{3})[-. )]*(\d{6})[-. ]*(?: *x(\d+))?\s*/gi, "");
+            document.getElementsByTagName("textarea")[i].value = res1;
+            
+            string1 = document.getElementsByTagName("textarea")[i].value;
+            res1 = string1.replace(/[09|08]*(\d)\s*[-. (]*(\d{3})[-. )]*(\d{5})[-. ]*(?: *x(\d+))?\s*/gi, "");
+            document.getElementsByTagName("textarea")[i].value = res1;
+            
+            string1 = document.getElementsByTagName("textarea")[i].value;
             res1 = string1.replace(/[09|08]*(\d)\s*[-. (]*(\d{3})[-. )]*(\d{4})[-. ]*(?: *x(\d+))?\s*/gi, "");
             document.getElementsByTagName("textarea")[i].value = res1;
-
+            
+            string1 = document.getElementsByTagName("textarea")[i].value;
+            res1 = string1.replace(/[09|08]*(\d)\s*[-. (]*(\d{2})[-. )]*(\d{2})[-. ]*(\d{2})[-. ]*(\d{2})[-. ]*(?: *x(\d+))?\s*/gi, "");
+            document.getElementsByTagName("textarea")[i].value = res1;
+            
+           
             i++;
         }
     }
