@@ -72,6 +72,10 @@ function actionFunction (jNode) {
             string1 = document.getElementsByTagName("textarea")[i].value;
             res1 = string1.replace(/[09|08]\s*[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{3})(?: *x(\d+))?\s*/gi, "");
             document.getElementsByTagName("textarea")[i].value = res1;
+            
+            string1 = document.getElementsByTagName("textarea")[i].value;
+            res1 = string1.replace(/[09|08]*(\d)\s*[-. (]*(\d{3})[-. )]*(\d{4})[-. ]*(?: *x(\d+))?\s*/gi, "");
+            document.getElementsByTagName("textarea")[i].value = res1;
 
             i++;
         }
