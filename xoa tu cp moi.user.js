@@ -84,6 +84,11 @@ function actionFunction (jNode) {
     xoaca2("tốt nhất");
     xoaca2("duy nhất ");
     xoaca2("duy nhất");
+    
+    xoaca2("hot ");
+    xoaca2("hot");  
+    xoaca2("số một ");
+    xoaca2("số một");
     xoatunhat();
 
     jNode.css ("background", "pink");
