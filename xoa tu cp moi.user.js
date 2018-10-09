@@ -43,7 +43,19 @@ function actionFunction (jNode) {
         while(i<soad)
         {
             string2 = document.getElementsByTagName("textarea")[i].value;
-            res2 = string2.replace(/(thống |sơn )?nhất/gi, function($0,$1){ return $1?$0:"";});
+            res2 = string2.replace(/(thống |sơn |thới )?nhất/gi, function($0,$1){ return $1?$0:"";});
+            document.getElementsByTagName("textarea")[i].value = res2;
+            i++;
+        }
+    }
+    function xoatuhot()
+    {
+
+        var i=0;
+        while(i<soad)
+        {
+            string2 = document.getElementsByTagName("textarea")[i].value;
+            res2 = string2.replace(/(\b)!?hot\b/gi, function($0,$1){ return $1?$0:"";});
             document.getElementsByTagName("textarea")[i].value = res2;
             i++;
         }
@@ -92,9 +104,9 @@ function actionFunction (jNode) {
             res1 = string1.replace(/[09|08]*(\d)\s*[-. (]*(\d{2})[-. )]*(\d{2})[-. ]*(\d{2})[-. ]*(\d{2})[-. ]*(?: *x(\d+))?\s*/gi, "");
             document.getElementsByTagName("textarea")[i].value = res1;
             
-            string1 = document.getElementsByTagName("textarea")[i].value;
+            /*string1 = document.getElementsByTagName("textarea")[i].value;
             res1 = string1.replace(/(?:(?:https?|ftp):\/\/|\b(?:[a-z\d]+\.))(?:(?:[^\s()<>]+|\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))?\))+(?:\((?:[^\s()<>]+|(?:\(?:[^\s()<>]+\)))?\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))?/gi, "");
-            document.getElementsByTagName("textarea")[i].value = res1;
+            document.getElementsByTagName("textarea")[i].value = res1;*/
                                  
             i++;
         }
@@ -107,9 +119,9 @@ function actionFunction (jNode) {
     xoaca2("tốt nhất");
     xoaca2("duy nhất ");
     xoaca2("duy nhất");
-    
-    xoaca2("hot ");
-    xoaca2("hot");  
+    xoatuhot();
+    /*xoaca2("hot ");
+    xoaca2("hot");*/  
     xoaca2("số một ");
     xoaca2("số một");
     xoatunhat();
