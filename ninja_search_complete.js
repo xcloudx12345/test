@@ -374,7 +374,7 @@ var LiquidMetal = function() {
 
   $.fn.flexselect = function(options) {
     this.each(function() {
-      if (this.tagName == "select") new $.flexselect(this, options);
+      if (this.tagName == "SELECT") new $.flexselect(this, options);
     });
     return this;
   };
