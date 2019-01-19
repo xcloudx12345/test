@@ -159,7 +159,7 @@ var LiquidMetal = function() {
     },
 
     preloadCache: function() {
-      this.cache = this.select.find("option").map(function() {
+      this.cache = this.select.children("option").map(function() {
         return { name: $.trim($(this).text()), value: $(this).val(), score: 0.0 };
       });
     },
@@ -374,7 +374,7 @@ var LiquidMetal = function() {
 
   $.fn.flexselect = function(options) {
     this.each(function() {
-      if (this.tagName == "SELECT") new $.flexselect(this, options);
+      if (this.tagName == "select") new $.flexselect(this, options);
     });
     return this;
   };
@@ -384,12 +384,12 @@ var LiquidMetal = function() {
 (function($){ 
   $(function() {
     $('select').each(function(index) {
-      if ($(this).find("option").size() <= 5) return false;
+      if ($(this).find("option").size() <= 50) return false;
       
       // if <select> has no id attribute, then give it one based on name attribute
       var id = $(this).attr('id');
       // if (id == null || id.length == 0) {
-      if (id == null || id.length == 0 || $('select[id=' + id + ']').size() > 1) {
+      if (id == null || id.length == 0) {
         var baseid = (id == null || id.length == 0) ? 
           $(this).attr('name').replace(/\[/,'-').replace(/\]/,'') : id;
         id = baseid;
