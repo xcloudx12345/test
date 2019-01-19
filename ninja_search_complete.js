@@ -384,12 +384,12 @@ var LiquidMetal = function() {
 (function($){ 
   $(function() {
     $('select').each(function(index) {
-      if ($(this).find("option").size() <= 50) return false;
+      if ($(this).find("option").size() <= 5) return false;
       
       // if <select> has no id attribute, then give it one based on name attribute
       var id = $(this).attr('id');
       // if (id == null || id.length == 0) {
-      if (id == null || id.length == 0) {
+      if (id == null || id.length == 0 || $('select[id=' + id + ']').size() > 1) {
         var baseid = (id == null || id.length == 0) ? 
           $(this).attr('name').replace(/\[/,'-').replace(/\]/,'') : id;
         id = baseid;
